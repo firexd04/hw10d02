@@ -11,8 +11,8 @@ describe("Dinosaur", function() {
   })
 
   it("dinosaur has type", function() {
-    assert.stricEqual(dinosaur1.type, "Tyrannosaurus");
-    assert.stricEqual(dinosaur2.type, "Velociraptor");
+    assert.strictEqual(dinosaur1.type, "Tyrannosaurus");
+    assert.strictEqual(dinosaur2.type, "Velociraptor");
   })
-  
+
 })

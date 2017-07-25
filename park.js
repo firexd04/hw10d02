@@ -12,26 +12,26 @@ Park.prototype.addDinosaur = function(dinosaur) {
 
 Park.prototype.removeDinosaur = function(type) {
   var i = this.enclosure.length;
-     while( i-- ) {
-      if(this.enclosure[i].type === type ) {
-        this.enclosure.splice(i,1);
-      }
+  while( i-- ) {
+    if(this.enclosure[i].type === type ) {
+      this.enclosure.splice(i,1);
     }
+  }
 }
 
 Park.prototype.getDinosaursMoreThanNumberOfssprings = function(offspringNumber) {
   var newEnclosure = this.enclosure 
 
-      var i = newEnclosure.length; 
+  var i = newEnclosure.length; 
 
-      while(i--)
-      {
-          if(newEnclosure[i].numberOffspringsYear > offspringNumber ) {
-            newEnclosure.splice(i,1);
-          }
-      }
+  while(i--)
+  {
+    if(newEnclosure[i].numberOffspringsYear > offspringNumber ) {
+      newEnclosure.splice(i,1);
+    }
+  }
 
-      return newEnclosure.length;
+  return newEnclosure.length;
 
 }
 
@@ -39,23 +39,44 @@ Park.prototype.getDinosaursMoreThanNumberOfssprings = function(offspringNumber) 
 Park.prototype.calculateNumberDinosaurs = function() {
   var ActualDinos = this.enclosure.length;
   var Offspring = 0;
-    for (var dino in this.enclosure) {
-      Offspring += this.enclosure[dino].numberOffspringsYear;
-  var Total = ActualDinos + Offspring;
-  return Total;
-    }
+  for (var dino in this.enclosure) {
+    Offspring += this.enclosure[dino].numberOffspringsYear;
+    var Total = ActualDinos + Offspring;
+    return Total;
   }
+}
 
-  Park.prototype.calculateNumberDinosaursYear2 = function() {
-    var ActualDinos = this.calculateNumberDinosaurs();
-    var Offspring = 0;
-      for (var dino in this.enclosure) {
-        Offspring += this.enclosure[dino].numberOffspringsYear;
+Park.prototype.calculateNumberDinosaursYear2 = function() {
+  var ActualDinos = this.calculateNumberDinosaurs();
+  var Offspring = 0;
+  for (var dino in this.enclosure) {
+    Offspring += this.enclosure[dino].numberOffspringsYear;
     var Total = (ActualDinos * Offspring) + ActualDinos;
     return Total;
-      }
-    }
+  }
+}
 
+Park.prototype.calculateNumberDinosaursYear22 = function() {
+  var ActualDinos = this.calculateNumberDinosaurs();
+  var Offspring = 0;
+  for (var dino in this.enclosure) {
+    Offspring += this.enclosure[dino].numberOffspringsYear;
+    var Total = (ActualDinos * Offspring) + ActualDinos;
+    return Total;
+  }
+}
+
+// Park.prototype.calculateNumberDinosaursAYear = function() {
+//   var ActualDinos = this.enclosure.length;
+//   var Offspring = 0;
+//   for (var [key, value] of this.enclosure) {
+//     Offspring += value;
+//     var Total = ActualDinos + Offspring;
+//     return Total;
+ 
+//     //return Math.pow(Total, year);
+//   }
+// }
 
   // Park.prototype.calculateNumberDinosaursXYears = function(years) {
   //   var x = 0;

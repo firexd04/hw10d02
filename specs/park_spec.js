@@ -31,12 +31,17 @@ describe("Park", function() {
     assert.strictEqual(park.size(), 2);
   })
 
-  it("can remove dinosaurs of certain type", function() {
+  it("can remove dinosaurs with more than acertain number of offsprings", function() {
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     park.addDinosaur(dinosaur4);
     assert.strictEqual(park.getDinosaursMoreThanNumberOfssprings(2), 2);
+  })
+
+  it("caluculate number of dinosaurs after year one, starting with 1 dinosaur", function() {
+    park.addDinosaur(dinosaur1);
+    assert.strictEqual(park.calculateNumberDinosaurs(), 4);
   })
 
 

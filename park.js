@@ -35,6 +35,18 @@ Park.prototype.getDinosaursMoreThanNumberOfssprings = function(offspringNumber) 
 
 }
 
+
+Park.prototype.calculateNumberDinosaurs = function() {
+  var ActualDinos = this.enclosure.length;
+  var Offspring = 0;
+    for (var dino in this.enclosure) {
+      Offspring += this.enclosure[dino].numberOffspringsYear;
+  var Total = ActualDinos + Offspring;
+  return Total;
+    }
+  }
+
+
 // var myPark = new Park();
 // myPark.size();
 

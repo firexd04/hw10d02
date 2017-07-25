@@ -22,13 +22,21 @@ describe("Park", function() {
     assert.strictEqual(park.size(), 1);
   })
 
-  it("car remove dinosaurs of certain type", function() {
+  it("can remove dinosaurs of certain type", function() {
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     park.addDinosaur(dinosaur4);
     park.removeDinosaur("Velociraptor");
     assert.strictEqual(park.size(), 2);
+  })
+
+  it("can remove dinosaurs of certain type", function() {
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.addDinosaur(dinosaur3);
+    park.addDinosaur(dinosaur4);
+    assert.strictEqual(park.getDinosaursMoreThanNumberOfssprings(2), 2);
   })
 
 

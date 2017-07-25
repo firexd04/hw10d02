@@ -12,7 +12,27 @@ Park.prototype.addDinosaur = function(dinosaur) {
 
 Park.prototype.removeDinosaur = function(type) {
   var i = this.enclosure.length;
-     while( i-- ) if(this.enclosure[i].type === type ) this.enclosure.splice(i,1);
+     while( i-- ) {
+      if(this.enclosure[i].type === type ) {
+        this.enclosure.splice(i,1);
+      }
+    }
+}
+
+Park.prototype.getDinosaursMoreThanNumberOfssprings = function(offspringNumber) {
+  var newEnclosure = this.enclosure 
+
+      var i = newEnclosure.length; 
+
+      while(i--)
+      {
+          if(newEnclosure[i].numberOffspringsYear > offspringNumber ) {
+            newEnclosure.splice(i,1);
+          }
+      }
+
+      return newEnclosure.length;
+
 }
 
 // var myPark = new Park();

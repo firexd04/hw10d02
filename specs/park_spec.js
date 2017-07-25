@@ -7,10 +7,19 @@ describe("Park", function() {
 
   beforeEach( function() {
     park = new Park();
+    dinosaur1 = new Dinosaur("Tyrannosaurus", 3);
+    dinosaur2 = new Dinosaur("Velociraptor", 4);
   })
 
   it("enclosure starts empty", function() {
     assert.strictEqual(park.size(), 0);
      })
+
+  it("can add dinosaur to enclosure", function() {
+    park.addDinosaur(dinosaur1);
+    assert.strictEqual(park.size(), 1);
+  })
+
+
   })
 

@@ -46,6 +46,45 @@ Park.prototype.calculateNumberDinosaurs = function() {
     }
   }
 
+  Park.prototype.calculateNumberDinosaursYear2 = function() {
+    var ActualDinos = this.calculateNumberDinosaurs();
+    var Offspring = 0;
+      for (var dino in this.enclosure) {
+        Offspring += this.enclosure[dino].numberOffspringsYear;
+    var Total = (ActualDinos * Offspring) + ActualDinos;
+    return Total;
+      }
+    }
+
+
+  // Park.prototype.calculateNumberDinosaursXYears = function(years) {
+  //   var x = 0;
+  //   var ActualDinos = this.enclosure.length;
+  //   var Offspring = 0;
+  //     for (var dino in this.enclosure) {
+  //   while (x < years) {
+  //       Offspring += this.enclosure[dino].numberOffspringsYear;
+  //       x++;
+  //   }
+  //   var Total = ActualDinos + Offspring;
+  //   return Total;
+  //     }
+  //   }
+
+  // Park.prototype.calculateNumberDinosaursXYears = function(years) {
+  //   var x = 0;
+  //   var ActualDinos = this.enclosure.length;
+  //   var Offspring = 0;
+  //     for (var dino in this.enclosure) {
+  //   while (x < years) {
+  //       Offspring += this.enclosure[dino].numberOffspringsYear;
+  //       x++;
+  //   }
+  //   var Total = ActualDinos + Offspring;
+  //   return Total;
+  //     }
+  //   }
+
 
 // var myPark = new Park();
 // myPark.size();

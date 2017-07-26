@@ -49,17 +49,17 @@ describe("Park", function() {
     assert.strictEqual(park.calculateNumberDinosaursYear2(), 16);
   })
 
-  it("caluculate number of dinosaurs after year two, with 2 dinosaurs", function() {
-    park.addDinosaur(dinosaur1);
-    park.addDinosaur(dinosaur3);
-    assert.strictEqual(park.calculateNumberDinosaursYear22(), 20);
-  })
-
   // it("caluculate number of dinosaurs after year two, with 2 dinosaurs", function() {
   //   park.addDinosaur(dinosaur1);
   //   park.addDinosaur(dinosaur3);
-  //   assert.strictEqual(park.calculateNumberDinosaursAYear(), 20);
+  //   assert.strictEqual(park.calculateNumberDinosaursYear22(), 20);
   // })
+
+  it("caluculate number of dinosaurs after year two, with 2 dinosaurs", function() {
+    park.addDinosaur(dinosaur1);
+    //park.addDinosaur(dinosaur3);
+    assert.strictEqual(park.calculateNumberDinosaursAYear(1), 4);
+  })
 
   // it("caluculate number of dinosaurs after x years, starting with 1 dinosaur", function() {
   //   park.addDinosaur(dinosaur1);
